@@ -1,0 +1,19 @@
+# Virtual environments
+venv/
+venv-linux/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment / secrets
+.env
+.env.*
+
+# Captures
+captures/
+*.pcap
+*.pcapng
+*.kismet
+*.kismetdb
