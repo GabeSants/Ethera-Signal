@@ -1,5 +1,7 @@
 import subprocess
 
+from modules.history import save_history
+
 
 def run_tshark():
     try:
@@ -18,6 +20,8 @@ def run_tshark():
         if not interface:
             print("Nenhuma interface selecionada.")
             return
+         
+        save_history("TShark", f"Interface {interface}")
 
         print(f"\nIniciando captura na interface {interface}...")
         print("Pressione Ctrl+C para interromper.\n")

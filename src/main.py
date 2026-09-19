@@ -4,6 +4,7 @@ from ui.menu import show_menu
 from modules.tshark import run_tshark
 from modules.nmap import run_nmap
 from modules.kismet import run_kismet
+from modules.history import show_history
 
 
 def main():
@@ -19,6 +20,9 @@ def main():
 
         elif choice == "3":
             run_kismet()
+        
+        elif choice == "4":
+            show_history()
 
         elif choice == "0":
             print("Encerrando Ethera Signal...")

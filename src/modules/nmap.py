@@ -1,5 +1,7 @@
 import subprocess
 
+from modules.history import save_history
+
 
 def run_nmap():
     target = input("Target: ").strip()
@@ -7,6 +9,8 @@ def run_nmap():
     if not target:
         print("No target specified.")
         return
+    
+    save_history("Nmap", target)
 
     print(f"\nStarting Nmap scan against {target}...\n")
 
